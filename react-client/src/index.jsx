@@ -28,7 +28,10 @@ class App extends React.Component {
   render () {
     return (
       <div>
+        <h1>MINUS</h1>
         <TimeCardAdder />
+        <h1>Your TimeCards</h1>
+        {/* TO DO - create timecardlist component */}
       </div>
     )
   }
