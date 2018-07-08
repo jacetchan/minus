@@ -1,3 +1,52 @@
-h1 {
-  color: red;
+body {
+  font-family: sans-serif;
 }
+
+/* TimeCardAdder */
+#time-card-adder {
+  border: 2px black solid;
+  width: 350px;
+}
+
+.time-card-row-info {
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: aquamarine;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.emoji-picker {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 30px;
+}
+
+.time-card-add-title {
+  padding-left: 20px;
+  padding-top: 2px;
+}
+
+.time-card-add-title input {
+  width: 270px;
+  height: 20px;
+  text-align: right;
+}
+
+.time-card-row-date-picker {
+  display: flex;
+  justify-content: center;
+}
+
+.time-card-add-button {
+  display: flex;
+  justify-content: center;
+}
+
+.time-card-add-button button {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/*  */

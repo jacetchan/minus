@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import List from './components/List.jsx';
+import TimeCardAdder from './components/TimeCardAdder.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      items: []
+      // TODO if necessary. REMOVE if not.
     }
   }
 
@@ -27,7 +27,7 @@ class App extends React.Component {
 
   render () {
     return (<div>
-      <h1>Item List</h1>
+      <TimeCardAdder />
     </div>)
   }
 }
