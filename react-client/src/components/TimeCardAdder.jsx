@@ -74,7 +74,7 @@ class TimeCardAdder extends React.Component {
       return (
         <div id="time-card-adder">
           <form onSubmit={this.handleAddButton}>
-            <div className="time-card-row-info">
+            <div className="time-card-adder-row-info">
               <div className="emoji-picker" onClick={this.handleEmojiPickerClick}>
                 {this.state.emoji}
               </div>
@@ -109,7 +109,7 @@ class TimeCardAdder extends React.Component {
       return (
         <div id="time-card-adder">
           <form onSubmit={this.handleAddButton}>
-            <div className="time-card-row-info">
+            <div className="time-card-adder-row-info">
               <div className="emoji-picker" onClick={this.handleEmojiPickerClick}>
                 {this.state.emoji}
               </div>
@@ -122,11 +122,13 @@ class TimeCardAdder extends React.Component {
                 />
               </div>
             </div>
-            <div className="time-card-row-date-picker">
-              <TimeCardDatePicker handleDateSelect={this.handleDateSelect}/>
-            </div>
-            <div className="time-card-add-button">
-              <button>+</button>
+            <div className="time-card-row-adder">
+              <div className="time-card-row-date-picker">
+                <TimeCardDatePicker handleDateSelect={this.handleDateSelect}/>
+              </div>
+              <div className="time-card-add-button">
+                <button>+</button>
+              </div>
             </div>
           </form>
         </div>

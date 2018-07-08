@@ -52,9 +52,9 @@ class TimeRemaining extends React.Component {
     }
 
     return (
-      <div>
+      <span>
         {message}
-      </div>
+      </span>
     );
   }
 }

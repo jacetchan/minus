@@ -30,9 +30,13 @@ class App extends React.Component {
     return (
       <div>
         <h1>MINUS</h1>
-        <TimeCardAdder />
+        <div className="card">
+          <TimeCardAdder />
+        </div>
         <h1>Your TimeCards</h1>
-        <TimeCardList />
+        <div className="card">
+          <TimeCardList />
+        </div>
       </div>
     )
   }
