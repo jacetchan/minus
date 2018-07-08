@@ -87,19 +87,21 @@ class TimeCardAdder extends React.Component {
                 />
               </div>
             </div>
-            <div className="time-card-row-date-picker">
+            <div className="time-card-emoji-picker-box">
+              <Picker 
+                title='Pick your emoji…'
+                emoji='point_up' 
+                onClick={(emoji) => {
+                  this.handleMakeEmojiSelection(emoji.native);
+                }}
+              />
+            </div>
+            {/* <div className="time-card-row-date-picker">
               <TimeCardDatePicker handleDateSelect={this.handleDateSelect}/>
             </div>
             <div className="time-card-add-button">
               <button>+</button>
-            </div>
-          <Picker 
-            title='Pick your emoji…'
-            emoji='point_up' 
-            onClick={(emoji) => {
-              this.handleMakeEmojiSelection(emoji.native);
-            }}
-          />
+            </div> */}
           </form>
         </div>
       )
