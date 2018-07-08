@@ -49,4 +49,8 @@ body {
   font-size: 1rem;
 }
 
-/*  */
+/* Adds an interim fix for react-datepicker time padding bug */
+/* https://github.com/Hacker0x01/react-datepicker/issues/1398 */
+ul.react-datepicker__time-list {
+  padding: 0;
+}

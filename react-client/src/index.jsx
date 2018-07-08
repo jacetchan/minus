@@ -26,9 +26,11 @@ class App extends React.Component {
   }
 
   render () {
-    return (<div>
-      <TimeCardAdder />
-    </div>)
+    return (
+      <div>
+        <TimeCardAdder />
+      </div>
+    )
   }
 }
 

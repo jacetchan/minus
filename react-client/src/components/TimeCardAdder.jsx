@@ -1,6 +1,5 @@
 import React from 'react';
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
+import TimeCardDatePicker from './TimeCardDatePicker.jsx';
 
 class TimeCardAdder extends React.Component {
   constructor(props) {
@@ -13,6 +12,7 @@ class TimeCardAdder extends React.Component {
 
     this.handleAddButton = this.handleAddButton.bind(this);
     this.handleTitleUpdate = this.handleTitleUpdate.bind(this);
+    this.handleDateSelect = this.handleDateSelect.bind(this);
   }
 
   componentDidMount() {
@@ -39,6 +39,10 @@ class TimeCardAdder extends React.Component {
     this.setState({title: e.target.value});
   }
 
+  handleDateSelect(selection) {
+    this.setState({date: selection});
+  }
+
   render () {
     return (
       <div id="time-card-adder">
@@ -55,7 +59,7 @@ class TimeCardAdder extends React.Component {
             </div>
           </div>
           <div className="time-card-row-date-picker">
-            16 Days 3 Hours 15 Min
+            <TimeCardDatePicker handleDateSelect={this.handleDateSelect}/>
           </div>
           <div className="time-card-add-button">
             <button>+</button>
@@ -65,5 +69,5 @@ class TimeCardAdder extends React.Component {
     )
   }
 }
-
+ 
 export default TimeCardAdder;
