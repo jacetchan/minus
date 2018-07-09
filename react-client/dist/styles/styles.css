@@ -62,6 +62,7 @@ h1 {
   height: 20px;
   text-align: center;
   font-size: medium;
+  width: 250px;
 }
 
 .time-card-row-date-picker {
