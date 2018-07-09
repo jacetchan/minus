@@ -57,10 +57,17 @@ h1 {
   padding: 1rem;
 }
 
+.time-card-row-adder input {
+  border: 1px black solid;
+  height: 20px;
+  text-align: center;
+  font-size: medium;
+}
+
 .time-card-row-date-picker {
   display: flex;
   justify-content: center;
-  padding-top: 0.65rem;
+  padding-top: 0.45rem;
 }
 
 .time-card-add-button {
