@@ -19,6 +19,7 @@
     "webpack": "^2.2.1"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.17.2",
     "countdown": "^2.6.0",
     "emoji-mart": "^2.6.1",
