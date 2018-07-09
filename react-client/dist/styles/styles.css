@@ -36,14 +36,19 @@ h1 {
 }
 
 .time-card-add-title {
-  padding-left: 30px;
+  padding-left: 20px;
   padding-top: 2px;
 }
 
 .time-card-add-title input {
   width: 270px;
-  height: 20px;
+  height: 22px;
   text-align: right;
+  border: 2px black solid;
+  padding-right: 10px;
+  font-family: sans-serif;
+  font-size: medium;
+  /* background-color: aquamarine; */
 }
 
 .time-card-row-adder {
