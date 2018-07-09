@@ -20,7 +20,6 @@ class TimeCardList extends React.Component {
     return (
       <div id="time-card-list">
         {this.state.timecards.map( (timecard, i) => {
-          console.log(timecard, 'mapping');
           return <TimeCardEntry timecard={timecard} key={i}/>
         })}
       </div>

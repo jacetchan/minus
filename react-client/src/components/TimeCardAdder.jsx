@@ -1,6 +1,6 @@
 import React from 'react';
+import axios from 'axios';
 import TimeCardDatePicker from './TimeCardDatePicker.jsx';
-
 import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
 
@@ -19,32 +19,25 @@ class TimeCardAdder extends React.Component {
     this.handleDateSelect = this.handleDateSelect.bind(this);
     this.handleEmojiPickerClick = this.handleEmojiPickerClick.bind(this);
     this.handleMakeEmojiSelection = this.handleMakeEmojiSelection.bind(this);
-  }
-
-  componentDidMount() {
-    // $.ajax({
-    //   url: '/items', 
-    //   success: (data) => {
-    //     this.setState({
-    //       items: data
-    //     })
-    //   },
-    //   error: (err) => {
-    //     console.log('err', err);
-    //   }
-    // });
+    this.resetState = this.resetState.bind(this);
   }
 
   handleAddButton(e) {
     // allow successful adds ONLY when event title exists
     if (this.state.title !== '') {
-      console.log(
-        `emoji: ${this.state.emoji}`, 
-        `title: ${this.state.title}`, 
-        `date: ${this.state.date}`
-      );
-      // TODO - make POST request to server. call a helper function.
-      // TODO - may want to clear the form fields.
+      const timecard = {
+        emoji: this.state.emoji,
+        title: this.state.title,
+        date: this.state.date
+      }
+
+      axios.post(`/timecards`, timecard )
+      .then(res => {
+        this.props.getTimeCards();
+
+        // reset the form fields
+        this.resetState();
+      })
     }
     e.preventDefault();
   }
@@ -65,6 +58,15 @@ class TimeCardAdder extends React.Component {
     this.setState({
       emoji: selection, 
       showPicker: !this.state.showPicker
+    });
+  }
+
+  resetState() {
+    this.setState({
+      emoji: '✍️',
+      title: '',
+      date: new Date(),
+      showPicker: false
     });
   }
 

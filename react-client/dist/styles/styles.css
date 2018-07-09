@@ -37,7 +37,7 @@ h1 {
 }
 
 .emoji-picker:hover {
-  background-color: rgb(255, 228, 228);
+  background-color: rgb(217, 255, 242);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -60,7 +60,7 @@ h1 {
 
 .time-card-add-title input:focus,
 .time-card-add-title input:hover {
-  background-color: rgb(255, 228, 228);
+  background-color: rgb(217, 255, 242);
   cursor: pointer;
 }
 
@@ -80,7 +80,7 @@ h1 {
 
 .time-card-row-adder input:focus,
 .time-card-row-adder input:hover {
-  background-color: rgb(255, 228, 228);
+  background-color: rgb(217, 255, 242);
   cursor: pointer;
 }
 
@@ -102,7 +102,7 @@ h1 {
 }
 
 .time-card-add-button button:hover {
-  background-color: rgb(255, 228, 228);
+  background-color: rgb(217, 255, 242);
   border: 1px black solid;
 }
 
@@ -116,8 +116,11 @@ h1 {
 
 #time-card-list {
   /* border: 2px blue solid; */
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 90%;
 }
 
 .time-card-entry {

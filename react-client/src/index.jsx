@@ -8,7 +8,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      // TODO if necessary. REMOVE if not.
       timecards: []
     }
     this.getTimeCards = this.getTimeCards.bind(this);
@@ -34,7 +33,7 @@ class App extends React.Component {
       <div>
         <h1>MINUS</h1>
         <div className="card">
-          <TimeCardAdder />
+          <TimeCardAdder getTimeCards={this.getTimeCards}/>
         </div>
         <h1>Your TimeCards</h1>
         <div className="card">
