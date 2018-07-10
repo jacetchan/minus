@@ -20,7 +20,7 @@ class App extends React.Component {
   getTimeCards() {
     axios.get('/timecards')
     .then( (response) => {
-      const timecards = response.data;
+      const timecards = response.data
       this.setState({timecards});
     })
     .catch( (error) => {

@@ -1,30 +1,38 @@
 import React from 'react';
 import TimeCardEntry from './TimeCardEntry.jsx';
 
-class TimeCardList extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { 
-      // TO DO - remove if not necessary
-      timecards: this.props.timecards
-    }
-  }
+// class TimeCardList extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { 
+//       // TO DO - remove if not necessary
+//       timecards: this.props.timecards
+//     }
+//   }
 
-  componentWillReceiveProps(nextProps){
-    if (nextProps.timecards !== this.props.timecards){
-      this.setState({timecards: nextProps.timecards});
-    }
-  }
+//   componentWillReceiveProps(nextProps){
+//     if (nextProps.timecards !== this.props.timecards){
+//       this.setState({timecards: nextProps.timecards});
+//     }
+//   }
 
-  render() {
-    return (
-      <div id="time-card-list">
-        {this.state.timecards.map( (timecard, i) => {
-          return <TimeCardEntry timecard={timecard} key={i}/>
-        })}
-      </div>
-    );
-  }
-}
- 
+//   render() {
+//     return (
+//       <div id="time-card-list">
+//         {this.state.timecards.map( (timecard, i) => {
+//           return <TimeCardEntry timecard={timecard} key={i}/>
+//         })}
+//       </div>
+//     );
+//   }
+// }
+
+const TimeCardList = (props) => (
+  <div id="time-card-list">
+    {props.timecards.map( (timecard, i) => {
+      return <TimeCardEntry timecard={timecard} key={i}/>
+    })}
+  </div>
+);
+
 export default TimeCardList;

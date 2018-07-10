@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import moment from 'moment';
 import TimeCardDatePicker from './TimeCardDatePicker.jsx';
 import 'emoji-mart/css/emoji-mart.css';
 import { Picker } from 'emoji-mart';
@@ -25,13 +26,14 @@ class TimeCardAdder extends React.Component {
   handleAddButton(e) {
     // allow successful adds ONLY when event title exists
     if (this.state.title !== '') {
+
       const timecard = {
         emoji: this.state.emoji,
         title: this.state.title,
-        date: this.state.date
+        date: moment(this.state.date).format('YYYY-MM-DD HH:mm:ss')
       }
 
-      axios.post(`/timecards`, timecard )
+      axios.post(`/timecards`, timecard)
       .then(res => {
         this.props.getTimeCards();
 
@@ -90,6 +92,7 @@ class TimeCardAdder extends React.Component {
               </div>
             </div>
             <div className="time-card-emoji-picker-box">
+            {/* NOTE: can deduplicate by rendering conditionally w/ func  */}
               <Picker 
                 title='Pick your emoji…'
                 emoji='point_up' 
