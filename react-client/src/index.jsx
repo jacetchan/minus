@@ -43,14 +43,12 @@ class App extends React.Component {
   render () {
     return (
       <div>
-        <div className="delete-box">
-          <h1 onClick={this.handleTitleClick} id="title"><span>MINUS</span></h1>
-        </div>
+        <h1 onClick={this.handleTitleClick} id="title"><span>MINUS</span></h1>
         <div className="card">
           <TimeCardAdder getTimeCards={this.getTimeCards}/>
         </div>
         <h1>Your TimeCards</h1>
-        <div className="card">
+        <div className="list">
           <TimeCardList timecards={this.state.timecards}/>
         </div>
       </div>

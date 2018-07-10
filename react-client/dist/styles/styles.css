@@ -13,10 +13,15 @@ h1 {
   justify-content: center;
 }
 
-/* Delete */
-.delete-box {
+.list {
   display: flex;
   justify-content: center;
+}
+
+/* Delete */
+#title {
+  margin: 40px auto 25px auto;
+  width: 200px;
 }
 
 #title:hover span {
@@ -28,7 +33,58 @@ h1 {
   content: 'CLEAR ALL? 😰';
   color: red;
   cursor: pointer;
+  border: 2px red solid;
+  border-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  box-shadow: 0 10px 6px -6px #777;
 }
+
+#title ~ h1 {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title:hover ~ h1 {
+  color: red;
+  transition: 1s;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#title:hover ~ h1:before {
+  content: 'All ';
+}
+
+#title:hover ~ h1:after {
+  content: ' will be deleted...';
+}
+
+#title:hover ~ .list {
+  background-color: rgb(255, 232, 232);
+  /* width: 90%; */
+  padding-top: 20px;
+  transition: 1s;
+  margin: 0 5%;
+  border: 2px red dotted;
+  display: flex;
+  justify-content: center;
+  border-radius: 30px;
+}
+
+#title:hover ~ .list .time-card-row-info {
+  background-color: rgb(255, 155, 155);
+  transition: 1s;
+}
+
+#title:hover ~ .card {
+  transition: 1s;
+  display: none;
+}
+
+
 
 /* TimeCardAdder */
 #time-card-adder {
