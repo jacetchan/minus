@@ -13,6 +13,23 @@ h1 {
   justify-content: center;
 }
 
+/* Delete */
+.delete-box {
+  display: flex;
+  justify-content: center;
+}
+
+#title:hover span {
+  display: none;
+}
+
+#title:hover:after {
+  font-size: 70%;
+  content: 'CLEAR ALL? 😰';
+  color: red;
+  cursor: pointer;
+}
+
 /* TimeCardAdder */
 #time-card-adder {
   border: 2px black solid;

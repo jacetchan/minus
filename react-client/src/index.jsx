@@ -11,6 +11,7 @@ class App extends React.Component {
       timecards: []
     }
     this.getTimeCards = this.getTimeCards.bind(this);
+    this.handleTitleClick = this.handleTitleClick.bind(this);
   }
 
   componentDidMount() {
@@ -28,10 +29,23 @@ class App extends React.Component {
     });
   }
 
+  handleTitleClick() {
+    axios.delete('/timecards')
+    .then( (response) => {
+      console.log(response);
+      this.getTimeCards();
+    })
+    .catch( (error) => {
+      console.log(error);
+    });
+  }
+
   render () {
     return (
       <div>
-        <h1>MINUS</h1>
+        <div className="delete-box">
+          <h1 onClick={this.handleTitleClick} id="title"><span>MINUS</span></h1>
+        </div>
         <div className="card">
           <TimeCardAdder getTimeCards={this.getTimeCards}/>
         </div>

@@ -34,3 +34,16 @@ module.exports.addTimeCard = function addTimeCard(dataToAdd, callback) {
     }
   });
 };
+
+module.exports.deleteTimeCards = function deleteTimeCards(callback) {
+  const query = `TRUNCATE timecards;`;
+
+  pool.query(query, (err, results) => {
+    if (err) {
+      console.log(err);
+      callback(err, null);
+    } else {
+      callback(null, 'Timecards successfully cleared!');
+    }
+  });
+};

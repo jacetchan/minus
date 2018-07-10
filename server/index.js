@@ -31,6 +31,18 @@ app.post('/timecards', (req, res) => {
   });
 });
 
+app.delete('/timecards', (req, res) => {
+  db.deleteTimeCards( (err, data) => {
+    if (err) {
+      res.status(400);
+      res.end();
+    } else {
+      res.status(200);
+      res.end(data);
+    }
+  });
+});
+
 app.listen(3000, function() {
   console.log('listening on port 3000!');
 });
